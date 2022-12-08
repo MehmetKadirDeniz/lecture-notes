@@ -1,0 +1,348 @@
+<!--  
+  
+Versiyon Kontrol Sistemi Nedir : Bir döküman (yazılım projesi, ofis belgesi vb.) üzerinde yaptığınız degişiklikleri adım adım izleyen , istediğinizde kayıt eden ve isterseniz bunu internet üzerindeki bir bilgisayarda veya yerel bir cihazda (respository / repo / depo) saklamanızı ve yönetmenizi sağlayan bir sistemdir.  
+
+GIT Bize Ne Sağlar : Birden fazla yerde (dağıtık olarak) dosyalarınızı ve versiyon kontrol bilgilerinizi depolayabilirsiniz. Böylelikle cihaz bağımsız olarak dosyalarınıza erişebilirsiniz.
+
+"commit" yaparak SnapShot (anlık görüntü) özelliği ile istediğiniz zaman proje veya dosyaların o anki halini kayıt altına alabilirsiniz. Böylelikle ileride bir hata ile karşılaşırsanız herhangi bir zamandaki herhangi bir versiyona dönüş yapabilirsiniz.
+
+
+SnapShot alındıktan sonra değişiklik yapılan dosyaları görebilirsiniz.
+
+
+GitHub , GitLab , BitBucket Nedir : GIT versiyon kontrol sistemini kullanan depolama servisleri diyebiliriz. 
+
+
+GitHub : Yazılımcılar için bir kod kütüphanesi ve bir çeşit sosyal medya ortamıdır. Yazılım geliştiriciler projelerini halka açık veya özel olarak saklayabilir. 
+
+
+GitLab : GitHub gibi bir GIT servisidir. Farklı olarak firmalara GitLab'ı kendi sunucularına kurma imkanı verildiği için genelde kurumsal tarafta kullanılır. GitLab ile firmalar kendi içerisinde GIT hizmetlerinden faydalanabilir.
+
+
+BitBucket : Genelde kişisel kullanıma yöneliktir. GitHub tarafındaki açık kaynak projeler ve sosyal medya ortamı burada gelişmemiştir.
+
+
+untracked (izlenmeyen): GIT tarafından henüz takip edilmeyen, yani yeni oluşturulmuş dosyaları ifade eder.
+
+unstaged (hazırlanmamış): Güncellenmiş ancak commit’lenmek için hazırlanmamış dosyaları ifade eder.
+
+staged (hazırlanmış): Commit’lenmeye hazır olan dosyaları ifade eder.
+
+deleted (silinmiş): Projeden silinmiş ama GIT üzerinden kaldırılmamış dosyaları ifade eder.
+
+
+git init : Henüz versiyon kontrolü altında olmayan bir projenin dizininde , boş bir git deposu oluşturmak için kullanılır.
+
+
+git config : GIT’in bir çok konfigürasyon ve ayarı vardır , bunlardan ikisi user.name ve user.email olanıdır. Bu ayarları yapılandırmak için aşağıdaki komutları kullanırız. GIT'i ilk kurduğumuzda genellikle aldığımız ilk hata bu configurasyon ayarlarını yapmadığımız için gelir. Burada yazdığınız isim ve email ileride GitHub benzeri bir platforma commit attığınızda da görüneceği için bunu bilerek isimlendirme yapmak yararlı olur. Ayrıca görüldüğü gibi bu ayarlar --global yani sistem genelinde geçerli ayarlardır. Proje bazlı bu ayarları değiştirebiliriz.
+
+git config --global user.name "Name Surname"
+git config --global user.email "test@email.com"
+
+Bu ayarların bütününü görüntülemek için , terminale git config --list yazılır.
+
+
+git add : Yeni eklenen veya üzerinde değişiklik yapılan dosyaları staged ortamına göndermek için kullanılır. git add <dosya veya klasor_name>
+Tek seferde bütün dosyaları eklemek için ise : git add . veya git add *  veya git add -A terminale yazılır. Buradaki -A (all) tümü anlamındadır.   . ise tüm dosya uzantılarını ifade eder.
+
+
+git rm : Staged ortamına eklenmiş bir dosyanın takibinin bırakılması yani untracked (izlenmeyen) hale getirilmesi sağlayan komuttur.
+
+git rm  --cached <dosya veya klasor_name> 
+
+
+Dosyayı klasörden silmek istiyorsak eğer , bu komutu kullanırız. git rm <dosya veya klasor_name>
+
+
+git status : Üzerinde çalışılan projenin o anki durumu hakkında bilgi verir. Yapılan değişiklikler , eklenen ve silinen dosyalar gibi bilgiler listelenir.
+
+On branch main -> Main branch'ınde olduğumuzu ,
+Changes to be commited -> Commit'lenmeye hazır değişiklikler olduğunu ,
+Modified : index.html -> Index.html dosyasında değişiklik yaptığımızı ,
+Deleted : styles.css -> styles.css dosyasını sildiğimizi ,
+
+
+Changes not staged for commit -> Üzerinde değişiklik yapılan ama staged ortamına gönderilmemiş dosyaları ifade eder.
+Untracked files -> takibi yapılmayan dosyaları ifade eder.
+
+
+git commit : Commit , staged ortamına alınan dosyaların Local Repository’e gönderilmesidir. En iyi uygulama yöntemi her kayıt sırasında yapılan değişiklikleri açıklayıcı bir mesaj eklemektir. Ayrıca her commit benzersiz bir kimliğe (unique ID) sahip olur. Bu sayede eski bir commit'e geri dönebilirsiniz ve herhangi bir kayıp yaşama ihtimaliniz kalmaz. 
+Vim editöründen çıkmak için en aşağısına :q yazılır.
+
+
+
+git commit -m "ilk commit mesajı"   Buradaki -m (message) mesaj anlamındadır.
+
+
+git log : Projedeki commit geçmişini görüntülememizi sağlar. Bütün commit'ler , id'si , yazarı , tarihi ve mesajı ile beraber listelenir.
+
+
+git branch : Local veya remote repository üzerinde yeni bir branch (dal) eklemek , silmek veya listelemek için kullanılır.
+
+Projenize yeni bir branch eklemek için ; git branch <branch_name>
+
+Tüm uzak ve yerel branch'lari listelemek için ; git branch -a  
+
+Bir branch'ı silmek için ; git branch -d <branch_name>
+
+
+git checkout : Branch’ler arası veya commit'ler arası geçiş yapmak istediğimizde kullanılır.
+
+Mevcutta var olan branch'a geçiş yapmak için ; git checkout <branch_name> 
+
+Yeni bir branch oluşturup , bu branch'a geçiş yapmak için ; git checkout -b <branch_name>
+
+Commitler arası geçiş yapmak için (Eski bir versiyona dönmek istediğimiz zaman) : 
+git checkout <commit_ID>
+
+
+git merge : Başka bir branch'da olan değişiklikleri , bulunduğumuz branch ile birleştirmek istediğimizde kullanılır.
+
+git merge <branch_name>
+
+
+git clone : Mevcut bir Remote Repository'de bulunan dosyaların bilgisayarımızda bir kopyasının oluşturulmasını sağlar.
+
+git clone <remote_URL>
+
+
+git push : Projemizde aldığımız commit'leri , remote repository'e gönderir. git push origin master 
+
+Burada bahsi geçen origin , remote repository’nin kök dizinini belirtir ve sabit bir isimdir. master ise sizin çalıştığınız branch (dal)’ı belirtir.
+
+Henüz remote repository’niz yoksa aşağıdaki komut ile local deponuzu uzak sunucudaki depoya bağlayabilirsiniz. git remote add origin http://uzak_deponun_adresi.git
+
+
+git diff : Repository üzerinde yapılan değişikliklerden sonra dosyalar arasında oluşan farklılıkları gösterir. 
+
+Çalışma dizini ile repository (HEAD) arasındaki farklılıkları görmek için : git diff HEAD
+
+İki commit arasındaki farklılıkları görmek için : git diff <commit_id_1>..<commit_id_2>
+
+Çalışma dizini ve staged ortamı arasındaki farkları görmek için : git diff --staged
+
+
+GIT temel komutlarını VS Code içerisindeki terminalde kullanmak için menü barından Terminal'i(1) açarak New Terminal (2) seçeneğini seçmelisiniz.
+
+Burada açılan terminal proje klasörümüzün içerisinde açılacak ve editörden ayrılmadan GIT komutlarını kullanabileceğiz.
+
+
+VS Code içerisinde Terminal Kullanmadan GIT Temel Komutları : 
+
+Henüz versiyon kontrolü altında olmayan bir projenin dizininde, boş bir git deposu oluşturmak için Activity Bar bölümünden Source Control (1) ikonuna tıklayıp, Initialize Repository (2) butonuna tıklamalıyız.
+
+
+Yeni eklenen veya üzerinde değişiklik yapılan dosyaları staged ortamına göndermek için Stage Changes butonuna tıklamalıyız.
+
+
+Birden fazla dosyamız olduğu zamanlarda eğer bütün değişiklikleri tek bir seferde staged ortamına göndermek istiyorsak Stage All Changes butonuna tıklamalıyız.
+
+
+Staged ortamına dosyayı eklediğimizde , dosyanın yanında "A" (1) (added) yazacaktır. Staged ortamına eklemediğimiz dosyalar olursa bu dosyaların yanında da "U" (2) (untracked) yazacaktır.
+
+
+Commit, staged ortamına alınan dosyaların Local Repository’e gönderilmesidir. En iyi uygulama yöntemi her kayıt sırasında yapılan değişiklikleri açıklayıcı bir mesaj eklemektir. Ayrıca her commit benzersiz bir kimliğe (unique ID) sahip olur. Dosyalarımızı commit'lemek için Message bölümüne (1) commit'imizi açıklayıcı bir mesaj yazmalıyız ve ardından Commit butonuna (2) basmalıyız.
+
+Commit'lenen dosya üzerinde değişiklik yaptığımızda,  dosyanın yanında "M"(modified) yazacaktır.
+
+
+Dosyamızda yapılan değişikliği görüntülemek için , Source Control bölümünde , dosyanın üzerine tıkladığımızda (1), iki farklı bölüm karşımıza geliyor. En sağdaki bölümde (3) dosyamızın üzerinde yaptığımız değişiklileri görüntüleyebiliriz.
+
+Bu değişiklikleri eğer geri almak istersek, tekrar sol bölümdeki (2) gibi olmasını istiyorsak Discard Changes butonuna tıklamalıyız.
+
+Eğer remote repository'e bağlıysak ve commit'lerimizi remote repository'e göndermek istersek Views and More Actions (1) butonuna tıklayıp, Push (2) seçeneğini seçmeliyiz.
+
+
+.gitignore dosyası projemizin kök dizinine oluşturulan düz bir metin dosyasıdır. Local çalışma alanındaki takip edilmesini istemediğin , takım arkadaşların için gerekmeyen dosyaların varsa veya bu dosyaların boyutu reponuza atmanıza gerek olmayacak kadar büyük ölçekli ise bu dosyaları .gitignore dosyasının içine yazarız ve git de içine yazılan dosyaları takip etmez.
+
+
+.gitignore dosyasında bulunması gereken dosyalar : 
+
+Paket yöneticisinden indirilen bağımlılıklar,
+image ve video dosyalarınız(dosya boyutları çok fazla olabilir)
+IDE eklentileri( örneğin .vscode)
+Sadece kendi çalışma alanınızda olması gereken başkaları tarafından görülmemesi gereken dosyalarınız (veritabanınıza ilişkin konfigürasyonlar)
+API anahtarları, kimlik bilgileri veya hassas bilgiler içeren dosyalar(.env)
+Çalışma dizinizdeki geçici dosyalar
+Log dosyaları
+Yararsız sistem dosyaları (örneğin MacOS işletim sisteminin .DS_Store dosyası )
+dist gibi oluşturulan dosyalar
+Veya herhangi bir dosyanız da olabilir.
+
+
+.gitignore dosyasının her satırına takip edilmesini istemediğimiz dosyaları veya dizinleri yazarak onların git tarafından takip edilmemesini sağlarız. 
+
+
+Dizinleri ise klasörün sonuna `/` işareti ekleyerek  belirtiriz. Örnek : node-modules/ dist/ logs/
+
+`*` yıldız karakteriyle ise belirtilen ilk örnekte `.log` uzantısına sahip dosyaların tümünü , ikinci örnekte ise `files` klasör içerisindeki bütün dosyaları izlemeyi bırakacaktır. 
+
+.log files/
+
+
+Eğer ki bir klasörümüzü içerisindeki bir dosya haricinde izlenmesini istemiyorsak `!` işareti ile bunu sağlayabiliriz. Bu örnekte `files` klasörü içerisindeki `example.txt` haricindeki dosyalar izlenmeyecektir. Files klasörü içerisindeki sadece **example.txt** git akışında görülecektir.
+
+!files/example.txt
+
+
+Yukarıdaki örnekte dikkat edilmesi gereken önemli bir ayrıntıyı açıklayacak olursak eğer ki daha öncesinde `files` klasörü `.gitignore` dosyasına eklenmişse sonrasında ise `!`  içerisindeki dosya ile işlem yapmak işe **yaramayacaktır.**
+
+files/ !files/example.txt
+
+
+`.gitignore` dosyasında yorum satırı oluşturmak için ise `#` karakteri kullanılır.
+
+
+Eğer projenizi `git add .` veya `git commit ` etmişseniz sonrasında  `.gitignore`  dosyasına eklemek istediğiniz dosyayı ekleseniz de bu işlem gerçekleşmeyecektir ve o dosyanız reponuzda hala GIT ile takip edilecektir. Tabi her şeyin bir çözümü olduğu gibi bu sorunu da çözmenin bir yolu var. İşte o çözüm .
+
+git rm --cached FILENAME
+
+
+
+GitHub'da repo oluşturabilmek için profilimizde bulunan "Repositories" menüsünden sağ kısımda bulunan "New" butonu ile repo oluşturma kısmına erişebiliriz.
+
+Owner: Reponun sahibinin seçiyoruz.
+
+Repository name: Oluşturduğumuz reponun adını belirliyoruz.
+
+Description: Repomuz için bir açıklama girebiliriz.
+
+Public: Repomuzun tüm herkesin erişimini sağlar.
+
+Private: Bu seçenek sayesinde repomuzu gizli bir şekilde oluşturabiliriz.
+
+Add a README file : Repomuza öncesinde README dosyası oluşturmuş oluruz , dilersek daha sonrasında kendimiz ekleyebilir ve güncelleyebiliriz.
+
+Add .gitignore: Repomuza öncesinde .gitignore dosyası oluşturabilir ve göndermek istemediğimiz dosyaları seçebiliriz , daha sonrasında aynı işlemi yapabilir ve .gitignore dosyamızı güncelleyebiliriz.
+
+Choose a license: Reponuz için bir lisans seçimi yapabilmenizi sağlar.
+
+
+
+Markdown , John Gruber ve Aaron Swartz tarafından geliştirilen ve 2004 yılından bu yana kullanılan metinden HTML'e (text-to-HTML) dönüşüm için kullanılan hafif bir işaretleme dilidir.
+
+GitHub gibi platformları kullananların aşina olduğu Markdown formatı , yaygın kanının aksine sadece README dosyaları oluşturmak kullanılmaz. Temel amaç okunabilirliği ve kullanılabilirliği arttırmaktır. Basitliği ve sadeliği sayesinde forumlarda ileti yazmaktan , kitap yazmaya kadar pek çok yerde kullanılabilir. Asıl güçlü olduğu kısım klavyeden elinizi kaldırmadan tablolardan , matematiksel ifadelere kadar ihtiyaç duyduğunuz her şeyi oluşturabilmeniz ve sonrasında biçimlendirebilmenizdir.
+
+
+Başlıklar
+HTML'de <h1> , <h2> , <h3> etiketleri ile aç-kapat yaparak oluşturduğumuz başlıkları , Markdown ile sadece # karakteri kullanarak oluşturabiliyoruz. Burada önemli olan nokta # karakterinden sonra boşluk bırakmaktır.
+
+h1 ve h2 başlıklar yazarken alternatif olarak bir yöntem daha mevcut. h1 için =  ve  h2 için - kullanabilirsiniz.
+
+Not: h1 ve h2 başlıklarda GitHub'ın yaptığı özelleştirme sebebiyle otomatik olarak gri bir çizgi geliyor.
+
+
+Paragraf
+Paragraf oluşturmak için haricen bir işlem yapmak gerekmiyor. Markdown formatında yazıyorsanız yeni bir satır oluşturmak paragraf için yeterli. Bir paragraf tek satırdan oluşabileceği gibi , arada boşluk bırakmadan alt satırdan devam etmek de mümkün.
+
+
+Kalın , Eğik ve Üstü Çizili İfadeler
+Yaygın kullanımda kalın yazmak için ** , eğik yazmak için * , hem kalın hem eğik yazmak için *** kullanılmaktadır.
+Ancak metin içeriği bu 3 sembolün arasında hiç boşluk olamayacak biçimde olmalıdır.( **bold** ,  *italic* ,
+***bolditalic*** )
+
+
+
+
+Tek ve Çok Satırlı Kod Blokları
+Tek satır kod bloğu için kodun başına ve sonuna ` (backtick) karakteri eklenir.
+`console.log("Hello, World!");`
+
+
+Çok satır kod bloğu için kodun başına ve sonuna 3 adet ``` ( backtick ) karakteri eklenir.
+
+```
+console.log("hello world");
+function (){
+console.log("Hello, World!);
+}
+```
+
+Yazılım diline göre kod bloğundaki ifadelerin stillendirilmesini isterseniz , kod bloğunun başındaki 3 adet backtick ifadesinden sonra javascript , python , css gibi etiket ekleyebilirsiniz.
+
+```javascript
+console.log("hello world");
+function (){
+console.log("Hello, World!);
+}
+```
+
+
+Yatay Çizgi
+İçerikte bölümleme yapmak için --- kullanabilirsiniz. HTML'deki karşılığı <hr> olan bu ifade ekran boyunca düz  çizgi üretir.
+
+
+Listeler
+HTML'de <ul> </ul> , <ol> </ol> ve <li> </li> etiketleri ile oluşturulan listeler Markdown formatında - ve * ile oluşturulur.
+
+Sırasız liste elde etmek için - karakterinden sonra 1 tane boşluk bırakılır sonrasında liste elemanı yazılır.
+
+- Liste Elemanı 1    
+- Liste Elemanı 2
+- Liste Elemanı 3
+
+
+Sıralı liste elde etmek için tek yapmanız gereken liste elemanlarının başına sıra numarası ve . nokta eklemek ve 
+sonrasında bir boşluk bırakıp liste elemanını yazmaktır.
+
+Buradaki önemli nokta şu: Siz farklı sıra numaraları vermek isteseniz de Markdown sıra numaralarını otomatik olarak biçimlendirmektedir.
+
+1. Liste Elemanı
+4. Liste Elemanı
+3. Liste Elemanı
+
+
+Markdown ile iç içe listeler yapmak için , alt listelere tab ile girinti verdiğimizde otomatik olarak nested list yapısına dönüşmekte.
+
+1. Liste Elemanı
+    1. Alt Liste Elemanı
+    2. Alt Liste Elemanı
+2. Liste Elemanı
+3. Liste Elemanı
+
+
+
+Tablo oluşturmak için aşağıdaki yapı kullanılır. Satır çizgisi için kullanılan - karaterine : işareti eklenerek tabloda sola , sağa veya ortaya hizalama yapılabilir. Tabloda sütunları oluşturmak için |  | karakteri kullanılır ve bu satırları oluşturmak için de bu iki karakterin içerisine kelimeler yazılır. 
+
+1.sütundaki kelimeleri sola hizalamak için |  | karakterinin içine 3 çizgi koyulur ve çizgilerin başına bir nokta konur. 
+
+2.sütundaki kelimeleri ortaya hizalamak için |  | karakterinin içine 3 çizgi koyulur ve çizgilerin başına ve sonuna  bir nokta konur.
+
+3.sütundaki kelimeleri sağa hizalamak için |  | karakterinin içine 3 çizgi koyulur ve çizgilerin başına bir nokta konur.
+
+
+| Ürünlerin Numaraları| Ürün Açıklaması| Ürünlerin Fiyatı|
+| :--- | :---: | ---: |
+| 1 | Açıklama | Fiyatı |
+
+
+
+Bağlantı ve Resim Eklemek
+HTML'den aşina olduğumuz <a> etiketi yerine Markdown'da []() karakterleri kullanılır. Köşeli parantez bağlantı açıklamasını , küme parantezi ise linki barındırır.
+
+[youtube](https://www.youtube.com/)
+
+
+Bağlantı resimleri de aynı şekilde eklenir. Sadece köşeli parantezden önce bir tane ! ünlem işareti eklenmelidir.
+Köşeli parantez html de alt özelliğini temsil eder yani oraya resmin açıklaması yazılır. Köşeli parantezin içini doldurmak zorunlu değildir , boş da kalabilir.                        
+
+( ) bu iki parantezin arasına resmin adresi( resmin nerede ollduğu ) yazılır. 
+![lorempicsum](https://picsum.photos/536/354)
+
+
+Alıntı
+Yazınız içinde alıntı kullanmak isterseniz yapmanız gereken , metinin başına > karakteri koymaktır.
+
+> Alıntı yapılan metin.
+
+
+
+
+
+
+
+
+
+
+
+-->

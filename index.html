@@ -1,0 +1,228 @@
+
+<!--   
+
+<h1>Lorem ipsum dolor sit.</h1>>
+<h2> Lorem ipsum dolor sit.</h2>
+    
+h1 , h2 , h3 , h4 , h5 , h6  bunlar başlık etiketleridir. 
+
+En küçüt etiket olan "h1" en kalın şekilde içerisindeki yazıyı gösterir. 
+
+Etiketlerin büyükten küçüğe doğru kalınlıkları düşer. 
+
+En düşük kalınlıkta gösteren "h" etiketi "h6" dır. 
+
+
+
+
+
+<p>Lorem ipsum dolor sit amet consectetur.</p>
+    
+p etiketi paragtaf oluşturmak için kullanılır. 
+
+Bu etiketin içerisine web sayfamızda olan içerikler koyulur. 
+
+
+
+
+    
+<ol>
+
+<li> Listenin birinci öğesi </li>
+<li> Listenin ikinci öğesi </li>
+    
+</ol>
+    
+
+"ol" etiketi sıralı liste oluşturur. 
+
+"li" etiketi "ol" etiketinin içerisinde oluşturulur ve listenin elemanlarını oluşturur.
+
+sıralı listenin öğelerinin başında sırasıyla  1 , 2 , 3 yazar. 
+
+
+
+
+
+<ul>
+    <li></li>
+    <li></li>
+</ul>
+
+"ul" etiketi sırasız liste oluşturur. 
+
+"li" etiketi "ol" etiketinin içerisinde oluşturulur ve listenin elemanlarını oluşturur.
+
+sırasız listenin öğelerinin başında içi dolu yuvarlak bulunur.  
+
+
+
+
+
+<img src="" alt="">
+
+img etiketi web sayfasına resim eklemek için kullanılır. 
+
+-img etiketinin "src" isminde zorunlu olarak doldurulması gereken özelliği vardır, src (source) özelliği değerine resmin ismi yazılmalıdır.
+
+-Eklenecek resim proje klasörünün içerisindeyse sadece src'ye resmin adı yazılır. 
+
+-Resim proje klasörünün içinde değilse farklı bir klasördeyse  klasörün ismi ve "/" sembolü yazılır ,sonrasında resmin adı yazılır. 
+
+"alt" özelliğine verilen değer resmin altında gözükür. 
+
+
+
+
+
+<a href="" target="_blank">  </a>
+
+"a" etiketi link oluşturmak için kullanılır.
+
+a etiketinin "href" özelliğine verilen değer linke tıklandığında gidilicek adresi gösterir. 
+
+a etiketinin "target" özelliğine "_blank" değerini verdiğimizde açılacak web sayfası başka bir sekmede açılır.  
+
+"a" etiketi web sitesinden yine o web sistesinin içinde olan bir sayfaya geçmek için kullanılır. örnek: <a href="iletişim.html"> iletişim sayfasina git </a>
+
+"a" etiketi web sitesinde ayni sayfa içinde başka bir yere gitmek için kullanılır.
+Sayfanın en alt kısmını şu etiketle oluşturduk. <h1 id="footer" > Sayfanın en alt kısmı </h1>
+id özelliğine verilen değer o sayfanın  tc kimlik numarası olur , sadece ona özeldir.
+bu "a" etiketinin href özelliğine  <a href="#footer"> sayfanın alt kısmına git </a> 
+değerini  verdiğimizden dolayı bu linke tıkladığımızda sayfanın en alt kısmına gider.
+
+Linke tıkladığımızda herhangi bir mail adresine , mail göndermek için "a" etiketi kullanılır.
+a etiketinin href kısmına "mailto:" yazılır , ardından mail yazılır. Bu etiket şu şekilde
+olur , <a href="mailto:platon2481@gmail.com"> mail at </a>
+
+Lİnke tıkladığımızda birine telefon etmek için "a" etiketi kullanılır.
+a etiketinin "href" kısmına "tel:" yazılır , ardından telefon numarası yazılır.
+Bu etiket şu şekilde olur , <a href="tel:05456456450"> telefon et </a>
+
+
+
+Bulunduğu yerin tamamını kaplayan elementlere " blok element " denir.
+
+Bulunduğu yerin tamamını kaplamayan elementlere " inline element " denir."
+
+
+
+"em" veya "i" etiketi içerisine yazılan yazıya italik özelliği kazandırır. <em>  </em> , <i> </i>
+
+"strong" veya "b" etiketi içerisine yazılan yazıyı kalın bir şekilde gösterir. <strong> </strong> , <b> </b>
+
+div etiketi  ... yazılacak.
+
+span etiketi ... yazılacak.
+
+"br" etiketi bir sonraki etiketin içeriğinin bir alt satırdan başlamasını sağlar. <br> 
+
+"hr" etiketinden sonra düz bir cizgi çizilir. <hr>
+
+
+"blockquote" etiketi html sayfasında başka bir kaynaktan alıntılanan bir içeriği işaretlemek için kullanılır. Kaynağın yolunu belirtmek içinse 
+
+cite niteliği kullanılır. 
+
+<blockquote cite="https://tr.wikipedia.org/wiki/World_Wide_Web_Consortium">
+
+    Dünya Çapında Ağ Konsorsiyumu, Ekim 1994'te Ağ'ın mucidi Tim Berners-Lee tarafından MIT ve CERN bünyesinde kurulmuş olan uluslararası Dünya Çapında Ağ standartlarını belirleyen örgüttür.
+
+</blockquote>
+
+
+
+h , p , ul , blockquote , div elementi block elementtir. 
+
+strong , a , b , img , inline elementtir.
+
+
+
+id etiketi , "id" kullanılan etiketin kimliğini belirtir. Biriciktir *(unique)* yani dökümanın içindeki bir 
+etikete yalnızca bir kez o id ismi verilebilir.
+<a href ="https://www.facebook.com/" id ="facebook-URL" ><a> Buradaki id yi kullanarak 
+direkt olarak bu HTML etiketine ulaşabiliriz.
+id biricik olduğu için istisna olarak id = facebook-URL şeklinde yazarak tırnak işareti kullanmayabiliriz.
+
+
+
+class etiketi , class, HTML etiketinin hangi sınıfta olduğunu belirmemizi sağlar. 
+Aynı sınıf adını birden fazla HTML etiketine verebiliriz.
+<img src ="" class ="documents">
+<a href ="" class ="documents" ></a>
+Burada görüldüğü gibi iki HTML etiketi de(img ve a) documents sınıfında bulunmaktadır. Daha sonrasında 
+aynı sınıfta bulunan bu iki etikete CSS ile aynı anda değişiklik yapılabilir.
+
+
+
+
+Bir html sayfası oluşturmadan önce mutlaka HTML 5 standartlarına uygun bir html iskeleti oluşturmalıyız. 
+Web sayfalarımızı HTML 5 standardına uygun hazırlamamız büyük önem taşımaktadır ,
+çünkü arama motorları tarafından önemsenmektedir. 
+
+HTML yapısında sayfanın genel yapısını tanımlamak ve bazı basit başlık bilgilerini sağlamak için 3 farklı etiket bulunur. 
+Bu üç etiket <html> , <head> ve <body> her web sayfasının temel iskeletini oluşturur.
+
+Ayrıca, her şeyi yüklemeden önce sayfa hakkında basit bilgiler (başlığı veya yazarı gibi) sağlarlar. Sayfa yapısı etiketleri, sayfanın görüntülendiğinde nasıl görüneceğini etkilemez; sadece tarayıcılara yardımcı olmak için bulunurlar.
+
+DOCTYPE Tanıtıcı : Bir sayfa yapısı etiketi olmasa da, XHTML 1.0 ve HTML 5 standartları web sayfalarınıza ek bir gereklilik getirir.
+Her sayfanın ilk satırı, sayfanızın uygun olduğu HTML sürümünü tanımlayan bir DOCTYPE tanımlayıcısı ve bazı durumlarda, spesifikasyonu tanımlayan Belge Türü Tanımını (DTD) içermelidir .
+Bunu <html> , <head> ve <body> etiketleri takip eder. HTML 5 belge türü, sayfa yapısı etiketlerinden önce görünür.
+
+<html> Etiketi : Her HTML sayfasındaki ilk sayfa yapısı etiketi <html> etiketidir. 
+Bu dosyanın içeriğinin HTML dilinde olduğunu gösterir. <html> etiketi DOCTYPE tanımlamasından hemen sonra kullanılmalıdır.
+Web sayfanızdaki tüm metin ve HTML öğeleri HTML etiketlerinin başlangıcına ve bitişine yerleştirilmelidir.     
+
+<html> etiketi sayfasını oluşturan etiketlerin tümünün bir kabı olarak hizmet vermektedir. Bunu dışarıda bırakırsanız, ki bunu yapmamalısınız çünkü bu, sayfanızı geçersiz kılar, tarayıcı sizin için bir <html> etiketi oluşturur, böylece sayfa HTML işlemcisi için anlamlı olur.
+
+<head> Etiketi : <head> etiketi sayfayla ilgili bilgiler içeren etiketler için bir kapsayıcıdır. 
+Genellikle sayfanın <head> bölümünde yalnızca birkaç etiket kullanılır. 
+Sayfanızın hiçbir metnini başlığa ( <head> etiketleri arasına ) koymamalısınız. 
+Yine <head> etiketinin arasında bulunan lang anahtar kelimesinin amacı sayfa içeriğinin hangi dilde oluştuğudur. 
+Bunu belirtmemizin sebebi arama motorlarında bize bu sayfayı tarayıcımızın diliyle zıt düştüğü durumda çevirme tavsiyesi verip vermemesini sağlamaktır.
+
+
+<head> Etiketi Arasında Bulunan Diğer Anahtar Kelimelerin Görevleri : 
+
+<meta> : Sayfamızı tanımlayan açıklamaların bulunduğu kısımdır. Sayfa açıklaması, sayfa başlığı, kullanılan karakter seti tanımlaması gibi işlemler burada tanımlanıyor.
+
+<title>: Tarayıcı penceresinin sekmesindeki başlığı buradan belirtiyoruz.
+
+<style>: Sayfada kullanılan stil işlemlerinin tanımlaması yapılır. Örneğin arka plan rengi yazı rengi ya da nesnelerin hizalanması gibi işlemler.
+
+
+<body> Etiketi : HTML sayfanızın içeriği <body> etiketi içinde bulunur . Bu, tüm metni ve diğer içeriği (bağlantılar, resimler vb.) içerir.
+
+
+
+
+
+
+
+
+Etiketlerin içerisine biz de özellik oluşturabiliriz. Özelliğin ismi yazılır , sonrasında "=" sembolü yazılır,
+" " sembolünün arasına değeri gireriz. Örnek : <img data-mek="dada">
+
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div> 
+    
+</div>
+           
+</body>
+</html>
