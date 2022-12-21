@@ -413,7 +413,11 @@ Yukarıdaki kodda sayfa yüklendikten 10 saniye sonra URL ile verdiğimiz değer
 
 Son özelliğimiz de name özelliğimizdir. Bu da meta bilgi olarak vereceğimiz bilginin tanımlayıcısıdır diyebiliriz. Örnek olarak sayfamızda en çok geçen harfin ne olduğunu belirteceğimiz bir meta bilgisi yazmak isteyelim : <meta name="enCokGecenHarf" content="a">
 
-Bu kod, bir HTML sayfasında bir metaveri tanımlar. <meta> etiketi , bir HTML sayfasında metaveri tanımlamak için kullanılır. Bu özel <meta> etiketi , bir metaverinin adını ve değerini belirtir. name özelliği , metaverinin adını belirtir. Bu örnekte , enCokGecenHarf adında bir metaveri tanımlanmıştır. content özelliği ise , metaverinin değerini belirtir. Bu örnekte , bu metaverinin değeri a'dır. Bu metaveri , bir sayfadaki en çok geçen harfin 2a' olduğunu belirtmek için kullanılabilir. Ancak bu örnekte belirtilen ad ve değer, standart bir HTML metaverisi değildir ve genellikle kullanılmaz.
+ <meta> etiketi , bir HTML sayfasında metaveri tanımlamak için kullanılır. Bu özel <meta> etiketi , bir metaverinin adını ve değerini belirtir. name özelliği , metaverinin adını belirtir. Bu örnekte , enCokGecenHarf adında bir metaveri tanımlanmıştır. content özelliği ise , metaverinin değerini belirtir. Bu örnekte , bu metaverinin değeri a'dır. Bu metaveri , bir sayfadaki en çok geçen harfin 'a' olduğunu belirtmek için kullanılabilir. Ancak bu örnekte belirtilen ad ve değer , standart bir HTML metaverisi değildir ve genellikle kullanılmaz.
+
+
+Meta etiketinde bulunan name ve content özellikleri , meta etiketinin ne işe yaradığını belirtmek için kullanılır. Name özelliği , meta etiketinin ne amaçla kullanıldığını belirtir. Örneğin , name özelliği "author" olarak ayarlanmışsa , meta etiketi bir web sayfasının yazarının adını belirtmek için kullanılmıştır. Content özelliği ise , name özelliği tarafından belirtilen bilgiyi içermektedir. Örneğin , name özelliği "keywords" olarak ayarlanmış ve content özelliği "HTML , etiket , meta" olarak ayarlanmışsa , bu meta etiketi bir web sayfasının anahtar kelimelerini belirtmek için kullanılmıştır.
+
 
 Bu şekilde istediğimiz meta bilgiyi sayfamızın başlık etiketleri arasında kullanabiliriz.
 
@@ -424,7 +428,8 @@ Arama motorları bizi meta verilerinde verilen "keywords" lere göre sıralamaya
 
 <meta name="keywords" content="Kodluyoruz,programlama,web">
 
-Ayrıca arama motorlarında sayfa başlığının altındaki açıklamalarda da yine bu meta verilerine öncelik verilir :
+
+Ayrıca arama motorlarında , sayfa başlığının altındaki açıklamalarda da yine bu meta verilerine öncelik verilir :
 
 <meta name="description" content="Kodluyoruzla web öğrenmeye hazır mısınız?">
 
@@ -441,109 +446,297 @@ Meta etiketiyle söyleyeceğimiz son şey de viewport konusu. Akıllı telefonla
 Burada genişliğin cihaz genişliğinde olduğunu ve zoom oranının 1.0 olacağını tarayıcıya belirmiş oluyoruz. Böylece mobilde masaüstü görünümü gibi bir görünüm değil olması gerektiği gibi düzgün bir görüntü elde ediyoruz. 
 
 
-Bu kod , bir web sayfasının görüntülenme ayarlarını belirleyen bir HTML meta etiketidir. Özellikle , "viewport" adlı bir meta etiketi kullanır ve bu etiketin içeriğinde "width" ve "initial-scale" gibi özellikler bulunur. "Width" özelliği , sayfanın görüntülenme genişliğini belirlerken , "initial-scale" özelliği ise sayfanın görüntülenme ölçeğini belirler. Bu özellikler sayesinde , sayfa görüntülenirken doğru bir şekilde ayarlanarak düzgün bir görüntü elde edilebilir.
+Bu kod , bir web sayfasının görüntülenme ayarlarını belirleyen bir HTML meta etiketidir. Özellikle , "viewport" adlı bir meta etiketi kullanır ve bu etiketin içeriğinde (content) "width" ve "initial-scale" gibi özellikler bulunur. "Width" özelliği , sayfanın görüntülenme genişliğini belirlerken , "initial-scale" özelliği ise sayfanın görüntülenme ölçeğini belirler. Bu özellikler sayesinde , sayfa görüntülenirken doğru bir şekilde ayarlanarak düzgün bir görüntü elde edilebilir.
 
 
 
+HTML Paragrafları
 
-
-
-
-
-
-
-
-
-
-<h1>Lorem ipsum dolor sit.</h1>>
-<h2> Lorem ipsum dolor sit.</h2>
-    
-h1 , h2 , h3 , h4 , h5 , h6  bunlar başlık etiketleridir. 
-
-En küçüt etiket olan "h1" en kalın şekilde içerisindeki yazıyı gösterir. 
-
-Etiketlerin büyükten küçüğe doğru kalınlıkları düşer. 
-
-En düşük kalınlıkta gösteren "h" etiketi "h6" dır. 
-
-
-
-
+HTML'de enter işlevi yoktur. Bu yüzden eğer farklı farklı paragraflar oluşturmak istiyorsak <p> etiketini kullanırız. Bir paragraf her zaman yeni bir satırda başlar ve tarayıcılar bir paragrafın önüne ve arkasına otomatik olarak biraz beyaz boşluk (kenar boşluğu) ekler.
 
 <p>Lorem ipsum dolor sit amet consectetur.</p>
-    
-p etiketi paragtaf oluşturmak için kullanılır. 
-
-Bu etiketin içerisine web sayfamızda olan içerikler koyulur. 
 
 
+HTML Başlıklar
+
+HTML’de en önemli kısım başlıklardır. <h1> Etiketi yazıların başlık şeklinde yazılması için kullanılır. Altı tane başlık çeşidi vardır. Bu başlık özellikleri <h1> den <h6> ya kadar kodlanmıştır. <h1> Etiketi en büyük fontu ve en çok önemi bildirirken <h6> ya doğru azalma göstermektedir.
+
+<h1>H1 Başlık</h1>
+<h2>H2 Başlık</h2>
+<h3>H3 Başlık</h3>
+<h4>H4 Başlık</h4>
+<h5>H5 Başlık</h5>
+<h6>H6 Başlık</h6>
 
 
-    
-<ol>
-
-<li> Listenin birinci öğesi </li>
-<li> Listenin ikinci öğesi </li>
-    
-</ol>
-    
-
-"ol" etiketi sıralı liste oluşturur. 
-
-"li" etiketi "ol" etiketinin içerisinde oluşturulur ve listenin elemanlarını oluşturur.
-
-sıralı listenin öğelerinin başında sırasıyla  1 , 2 , 3 yazar. 
+Başlıklar HTML Dökümanlar’da büyük önem arz eder. Arama motorları , web sayfalarınızın yapısını ve içeriğini indekslemek için başlıkları kullanır. Kullanıcılar genellikle başlıkları ile bir sayfayı gözden kaçırırlar. Belge yapısını göstermek için başlıkları kullanmak önemlidir. <h1>Başlıklar ana başlıklar için kullanılmalı , ardından başlıklar takip edilmeli <h3> , biraz daha az önemli <h4> vb.
 
 
 
+Listeleme Etiketleri
 
+Listeleri iki ana başlık altında listeleyebiliriz ; Sıralı Listeler , Sırasız Listeler
+
+
+Sıralı Listeler
+
+"ol" etiketi sıralı liste oluşturur. "li" etiketi "ol" etiketinin içerisinde oluşturulur ve listenin elemanlarını oluşturur. Sıralı listenin öğelerinin başında sırasıyla 1 , 2 , 3 yazar. Liste başındaki sıralandırmayı rakamdan başka roma rakamı veya alfabetik şeklinde de yapabiliriz. Bunun için type özelliğini kullanmamız gerekir.
+
+<ol type="I">  <li>Javascript</li>  </ol>
+<ol type="A">  <li>Javascript</li>  </ol>
+
+
+Sırasız Listeler
+
+Sırasız listeler numaralandırma olmadan oluşturduğumuz listelerdir. "ul" etiketi sırasız liste oluşturur. 
+"li" etiketi "ul" etiketinin içerisinde oluşturulur ve listenin elemanlarını oluşturur. Sırasız listenin öğelerinin başında içi dolu yuvarlak bulunur. Her bir liste elemanı bir satırı kaplayacak şekilde yani blok etiket şeklinde oluşturulur. Liste elemanlarının başındaki içi dolu daireyi değiştirebilir veya silebiliriz.
+Liste başındaki içi dolu daireyi değiştirmek için ise disc , square , circle değerlerini kullanabiliriz.
+
+Silmek için : <ul type="none"> <li>Çay</li>  </ul>
+
+Değiştirmek için : <ul type="circle"> <li>Çay</li>  </ul>
+
+
+
+Emmet ile Daha Hızlı HTML Yapıları Oluşturmak
+
+Emmet web geliştiricilerinin sıklıkla zamandan tasarruf etmek ve daha hızlı kod yazmak için kullandığı bir eklentidir. Emmet’in temel mantığı , yazılımcıya kodlama yaparken zaman kazandırmasıdır. Örneğin hepimiz bir html dosyasının iskeletini biliriz. Emmet sayesinde çok daha hızlı bir biçimde ! + Tab kullanarak bu yapıyı oluşturabilirsiniz. Bunu tek tek yazmaktansa iki tuşa basarak yapmak çok güzel değil mi?
+
+Anlayacağınız üzere Emmet bazı kısa yollarla basit bir biçimde HTML ve CSS kodu yazmamıza yardımcı olur. Aynı kodu tekrar tekrar yazmanızı engellerken üretkenliğinizi de arttırmış olur. Emmet neredeyse tüm text editörlerinde mevcuttur , bu yüzden onu yüklemenize gerek yoktur.
+
+
+Emmet’deki Kısa Yollar 
+
+1- '>' sembolünü kullanarak html elementinin içinde belirtilen bir elementi oluşturabiliriz. 'ul' elementi içerisinde 'li' elementi  oluşturmak istiyorsunuz. Bunun için yapmanız gereken tek şey ul>li yazarak Tab’a basmak. Bu işlemi yaptıktan sonra 'ul' elementinin içine eklemek istediğimiz bir element kalmayınca ^ ifadesini kullanarak ul elementi dışına çıkıp 'ul' elementinin dışında yeni elementler oluşturabiliriz. Örneğin 'ul' elementi içinde 'li' elementi oluşturduktan sonra 'ul' elementinin dışında bir 'p' elementi eklemek istiyorum. Bunun için ul>li^p yazarak taba basabilirim.
+
+
+2- Peki ya bu 'ul' elementi içerisine birden fazla 'li' oluşturmak istiyorsam , ne yapmalıyım ?
+Bunun için '*' ifadesini kullanırız. ul>li*3 yaparak 'ul' elementi içerisinde üç adet 'li' elementi oluşturabiliriz.
+
+
+3 - Bunun yerine tek tek  element eklemek için + ifadesini kullanırız. ul>li+li+li
+
+
+4 - Element eklerken onlara class özelliği vermek için de '.' ifadesini kullanırız. Örneğin ul.class1>li.class2 
+Aynı şekilde ul.class1>li.class2*3 denerek bir yerine üç adet class2 sınıfından 'li' elementi oluşturulabilirdi.
+
+
+5 - Bir id özelliği eklemek için ise '#' ifadesini kullanırız. Yeni bir örnekle id özelliği eklemeyi görelim. Örnek : ul#id1>li#id2 
+
+
+6 - Burada + ve * ifadesinin farkını da daha kolay anlayabiliriz. Örneğin ul elementinin içine aynı id’ye sahip 3 adet li eklemek istiyorsam * sembolü kullanılabilir. Fakat amacım farklı id’lere sahip üç adet li elementi oluşturmaksa ul>li#id1+li#id2+li#id3 yapılır.
+
+
+7 - Peki otomatik artış sağlayan değerleri tek tek yazmak amacımız zaman tasarrufu iken ne kadar mantıklı?
+Emmet bunun için de bir kısa yola sahip '$' sembolü. Yani yukarda görmüş olduğunuz ul>li#id1+li#id2+li#id3 şeklinde yazdığımız kod bloğunu çok daha basit bir biçimde ul>li#idNo$*3 diyerek yazabiliriz.
+Böylece otomatik olarak idNo1 , idNo2 ve idNo3 idlerine sahip üç adet li tagımız olur.
+
+
+8 - Sırada oluşturulan tagların içine text yazılması var. Textlerimizi {} ifadesinin içine yazmamız yeterli.
+p{Emmet ile tag içine text yazma}  <p>Emmet ile tag içine text yazma</p>
+
+
+9 - Bir diğer emmet kısa yolunu ise kodumuzda içerik olmadığı zamanlarda kullandığımız anlamsız yazıları yani “lorem ipsum”ları oluşturmak için kullanıyoruz. Örneğin bir paragraf oluşturacaksınız ve bu paragrafın henüz bi içeriği yok fakat boş durmasındansa oraya metin geleceğini belirtmek istiyorsunuz veya metin geldiğinde nasıl görüneceğini görmek istiyorsunuz. Anlamsız harfler veya zaman gerektiren rastgele cümleler oluşturmak yerine bu kısayolu kullanabilirsiniz. p>lorem Taba bastığınızda aşağıdaki gibi bir çıktı alacaksınız.
+
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Facere dolore sint ea? Molestiae ratione ullam, illo commodi ipsum soluta mollitia itaque,maiores maxime natus reiciendis architecto. Quaerat culpa beatae dicta.</p>
+
+
+10 - Bu kadar uzun bir lorem yazısı istemiyorsanız yapmanız gereken tek şey lorem yazdıktan sonra yanına kaç kelimeli bir lorem oluşturmak istediğinizi eklemek. Örneğin 5 kelimeli bir lorem yazısı istiyorsunuz. Bunun için p>lorem5 yazmanız yeterli.
+
+
+11 - Son olarak Emmet’in bir özelliğinden bahsedeceğim. li.className yazıp Tab’a bastığımızda ne oluşmasını bekleriz? Evet className class’ına ait bir li tagı oluşmasını. peki herhangi bir tag koymaksızın sadece .className yazdıktan sonra Tab’a basarsak ne olur? Cevap: <div class="className"></div>
+
+Gördüğünüz gibi bir div oluşturdu. Emmet’e bir tag vermeksizin . veya # ifadelerini kullandığımızda bunun div tagı olduğunu biliyor. Ama biz bunu ul tagı içinde denersek tepkisi ne olur ? Hadi deneyelim!:
 
 <ul>
-    <li></li>
-    <li></li>
+  <li class="className"></li>
 </ul>
 
-"ul" etiketi sırasız liste oluşturur. 
 
-"li" etiketi "ol" etiketinin içerisinde oluşturulur ve listenin elemanlarını oluşturur.
-
-sırasız listenin öğelerinin başında içi dolu yuvarlak bulunur.  
+Gördüğünüz gibi ul>.className yazıp Tab’a bastığımızda ise bunun li elementi olduğunu algılıyor.
 
 
 
+Görsellerle Çalışmak
+
+HTML sayfasına resim eklemek için <img> tagi kullanılır.
 
 
-<img src="" alt="">
+src="" Kullanımı
 
-img etiketi web sayfasına resim eklemek için kullanılır. 
+Kod bloğundaki src="" özelliğine görselin URL ya da dosya adresi belirtilerek resim HTML sayfasına çağırılır. ( Resmi webden çağırmak için resmin URL'ini src=”…” parametresine eklemek yeterlidir. )
 
--img etiketinin "src" isminde zorunlu olarak doldurulması gereken özelliği vardır, src (source) özelliği değerine resmin ismi yazılmalıdır.
+<img src="ornek.jpg"/>  ( Resmin dosya adresinin yazıldığı örnek. )
 
--Eklenecek resim proje klasörünün içerisindeyse sadece src'ye resmin adı yazılır. 
-
--Resim proje klasörünün içinde değilse farklı bir klasördeyse  klasörün ismi ve "/" sembolü yazılır ,sonrasında resmin adı yazılır. 
-
-"alt" özelliğine verilen değer resmin altında gözükür. 
+Yukarıdaki örnekte resim html dosyasıyla aynı dizinde(klasörde) olduğu için direkt adını ve uzantısını yazmak yeterlidir. Eğer html dosyasıyla resim aynı klasörde değilse resmin hangi klasörde olduğunu yazıp ve / sembolü koyulup resmin ismi uzantısıyla birlikte yazılır. Burada img uzantısına dikkat etmek önemli , html dosyaları nasıl .html ile bitiyorsa tüm resim dosyalarının sonu da .xbm, .gif, .png veya .jpg ile veya başka bir resim formatıyla bitmelidir. 
 
 
+Yaygın Image Formatları
+
+Diyelim ki projenin içerisinde bir dizin oluşturdunuz (images) ve resminizi bu dizine eklediniz. Bu defa çağırmak için öncelikle images dizinine gitmek gerekiyor.
+
+<img src="images/ornek.jpg"/> 
+
+
+Ya da resim bir üst dizinde kalıyor olabilir. Bu durumda bir üst dizine çıkıp images dizinini bulup resmi çağırmak gerekiyor. ( Üst dizine çıkmak için ../ kullanırız. )
+
+<img src="../images/ornek.jpg"/>
+
+Bu şekilde istediğiniz kadar üst dizine çıkabilirsiniz.  <img src="../../images/ornek.jpg"/>
+
+
+alt="" Kullanımı
+
+Alt textlerin temel amacı , görüntüleri göremeyen kullanıcılar için metinler sunmaktır. Kullanıcı görseli görüntüleyemez ise ( Yavaş bağlantı , src özelliğinde hata vb. ) alt özelliği görüntü için alternatif bilgilendirici bir metin içerir. 
+
+<img src="../images/kedi.jpg" alt="Yavru Kedi"/>
+
+
+title="" Kullanımı
+
+Title özelliği kullanıcıyı bilgilendirme amacı taşır. Cursor ( mouse imleci ) ile görselin üzerine gelince bu özelliğe verilen text mesajı görünür. Ek açıklama gerektirecek resimlerde kullanabiliriz. Bilgilendirme amacı taşır. Title ve Alt parametreleri SEO açısından önem taşımaktadır.
+
+<img src="../images/kedi.jpg" title="image"/>	
+
+
+width ve height Kullanımı
+
+Görsele istenen ölçüleri vermek için width ve height özellikleri kullanılır. Width yatay genişlik , Height ise dikey uzunluk için kullanılır.
+
+Width ve Height özellikleri tanımlanmadığı zaman görsel sayfada gerçek ölçüleri ile görünür. Bu ölçülerden yalnızca birine değer verildiğinde görsel oranları korunarak belirlenen ölçüde görünür. Her iki özelliğe de değer verildiğinde resim oranları yeni verilen ölçülerde olduğu gibi görünür. Bu kullanım resim ölçüleri ile uyumlu olmadığı zaman resimde oransal bozukluklar oluşur.
+
+<img src="resim.jpg" width="300" />
+<img src="resim.jpg" height="400" />
+<img src="resim.jpg" width="300" height="600" />
+<img src="resim.jpg" height="100%" />
+
+
+border Kullanımı
+
+Görseli belirtilen kalınlıkta çerçeve içine alır. Daha gelişmiş CSS Border özelliği bunun yerine kullanılabilir.
+
+Aşağıda border örneği : Görsele 3 pixel kalınlıkta border verir. 
+
+<img src="resim.jpg" border="3" />
+
+
+align Kullanımı
+
+Web sayfasında resmin gözükeceği pozisyonu belirlemede align özelliği kullanılır. Bu özelliğe verilebilecek değerler şunlardır: left, right. Görselin sağa veya sola yaslı çıkmasını sağlar.
+
+<img src="resim.jpg" align="right" />
+
+
+Görsele Link Vermek
+
+Görsele link vermek için img tag'i a taginin içerisinde kullanılır. Yönlendirilmek istenen yerin URL'i a taginin href özelliğine yazılır. Görsel ise a taginin açıklama kısmına eklenir.
+
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" >
+</a>
+
+
+map ve area etiketileri
+
+Görselleriniz hyperlink atamanız durumunda görselin tüm alanı link alanı haline dönüşecektir. Görselin herhangi bir yerine tıklanılması durumunda görsel sizi tanımlanan bağlantıya gönderecektir. <img> etiketleri için kullanılan <map> ve <area> etiketleri ile resmin içindeki koordinatlarla belirlediğimiz bir alanı sadece link haline getirebiliriz. Eklediğimiz <area> etiketi kadar belirlenen alanı bir resim üzerinden birçok bağlantıya link verebiliriz.
+
+Örneğin Instagram'da bazı satıcılarda gördüğünüz bir insan fotoğraf üzerinde pantolon ve ayakkabının ürün linklerini ayrı ayrı vermek isterseniz kullanabilirsiniz.
+
+<html>
+
+<body>
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap" >
+
+<map name="workmap">
+
+ <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+ <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+ <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+
+</map>
+
+</body>
+
+</html>
+
+
+onload Event'i Kullanımı
+
+Bu olay görsel yüklenmesi tamamlandığında çalışacak fonksiyonu belirler. Herhangi bir nedenle görsel yüklenemezse ya da belirtilen adreste resim yoksa fonksiyon çalışmaz.
+
+Aşağıdaki örnekte görsel yüklenmesi tamamlandığında resimYuklendi() fonksiyonu çalışacak ve ekrana Resim Yüklendi. uyarısı JavaScript tarafından bastırılacak. Bu konuyu ileride çok daha detaylı göreceğiz.
+
+<html>
+    <body>
+        <img src="resim.jpg" onload="resimYuklendi()" />
+    </body>
+    
+    <script>
+        function resimYuklendi(){
+            alert("Resim yüklendi.");
+        }
+    </script>
+</html>
+
+
+picture Elementi ile Kullanımı
+
+HTML5 ile gelen picture elementi web sayfamızda responsive image'ler kullanmamız konusunda büyük kolaylıklar sağlıyor. Bir tane img ve birden fazla source içerebilir. picture tagi ekran boyutlarına göre birden çok source kulllanmamızı sağlar bu sayede ekran boyutu değiştikçe farklı image'leri kullanabilirsiniz. 
+
+source etiketi , picture elementinin içinde kullanılır. source etiketi , farklı ekran çözünürlükleri için farklı resimlerin kullanılacağını belirtir. Her source etiketin içinde , srcset özelliği ile resim dosyasının yolu belirtilir ve media özelliği ile de hangi ekran çözünürlüklerinde bu resim kullanılacağı belirtilir.
+
+Örnek: Burada ekran genişliğinin 800 pikselden küçük olduğu durumlarda başka diğer koşullarda ise başka bir görsel kullanılacak. 
+
+<picture>
+    <source srcset="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" media="(min-width: 800px)">
+    
+    <img src="/media/cc0-images/painted-hand-298-332.jpg" alt="" />
+</picture>
+
+
+Tarayıcı , her bir source öğesini inceleyip eşleşme sağlar. Eşleşme bulunamazsa veya tarayıcı <picture> öğesini desteklemiyorsa , <img> öğesinin src URL'si seçilir. Seçilen görüntü daha sonra <img> öğesinin kapladığı alanda sunulur.
 
 
 
-<a href="" target="_blank">  </a>
+Linklerin kullanımı
 
-"a" etiketi link oluşturmak için kullanılır.
+"a" etiketi link oluşturmak için kullanılır. Bir HTML dosyası içerisinde herhangi bir sayfaya , sayfa içine , bir websitesine , e-mail , telefon adreslerine ya da dosya yolu belirtilen herhangi bir dosyaya ( resim , video , zip vb. ) erişmek için kullanılan HTML etiketidir. Genel yapısı <a> </a> şeklindedir. a etiketinin "href" özelliğine verilen değer linke tıklandığında gidilicek adresi gösterir. 
 
-a etiketinin "href" özelliğine verilen değer linke tıklandığında gidilicek adresi gösterir. 
+<a href="gitmek istenilen yer"> Gidilecek yer için isim tanımlaması </a>
 
-a etiketinin "target" özelliğine "_blank" değerini verdiğimizde açılacak web sayfası başka bir sekmede açılır.  
+Html Sayfaları arası kullanımı
 
-"a" etiketi web sitesinden yine o web sistesinin içinde olan bir sayfaya geçmek için kullanılır. örnek: <a href="iletişim.html"> iletişim sayfasina git </a>
+HTML sayfalar arası geçiş yapmak için linklerden şu şekilde faydalanırız. Şu an üzerinde çalıştığımız klasörün içerisinde bir linksayfasi.html adında dosya oluşturduk ve içerisine bir şeyler yazdık.
+Şimdi HTML'de sayfalar arası linkleme ile yeni oluşturduğumuz sayfaya gitmek için link oluşturacağız.
 
-"a" etiketi web sitesinde ayni sayfa içinde başka bir yere gitmek için kullanılır.
-Sayfanın en alt kısmını şu etiketle oluşturduk. <h1 id="footer" > Sayfanın en alt kısmı </h1>
-id özelliğine verilen değer o sayfanın  tc kimlik numarası olur , sadece ona özeldir.
-bu "a" etiketinin href özelliğine  <a href="#footer"> sayfanın alt kısmına git </a> 
-değerini  verdiğimizden dolayı bu linke tıkladığımızda sayfanın en alt kısmına gider.
+<a href="linksayfasi.html"> İkinci sayfaya git </a>
+
+Bunu oluşturduğumuzda tarayıcı ekranımızda ikinci sayfaya git diye bir link oluşacak. ( üzerine gelindiğinde mouse'un el işaretine dönmesinden anlaşılabilir. )
+
+
+Sayfa içerisinde kullanımı
+
+Sayfa içerisinde herhangi bir başlığa ya da bölüme gitmek için linkler kullanılabilir. Aynı sayfada işlem yapacağımız için birden fazla satır ekleyeceğim ve en aşağıya scroll ile kaydırmak yerine link yardımı ile gideceğim. Bunun için de gidilecek bölüm için a tagine id özelliği verilmelidir:
+
+<h1 id="footer"> Sayfanın en aşağısı </h1>
+<p> Lorem, ipsum dolor. </p>
+<p> Architecto, vel tenetur? </p>
+<p> Commodi, quis reiciendis! </p>
+<a href="#footer"> sayfanın en aşağısına git. </a>
+
+
+
+Websiteye gidilmesinde kullanımı 
+
+a etiketinde href özelliğine verilen herhangi bir websitesi adresine kolayca gidilebilir. Burada target özelliğini göreceğiz. Bu özellik , gitmek istediğimiz bağlantının geçerli pencerede mi yoksa yeni bir pencerede mi açılması için kullanılır. _self değeri geçerli pencerede açılması içindir. Varsayılan olarak böyledir. 
+a etiketinin "target" özelliğine "_blank" değerini verdiğimizde açılacak web sayfası başka bir sekmede açılır.
+
+
+Mail ve telefon yönlendirmesinde kullanımı
+
+a etiketinin href özelliğine verilen mailto: ve tel: özellikleri sayesinde direkt olarak herhangi bir e-mail adresine posta gönderilebilir ya da geçerli bir telefon numarası aranabilir.
 
 Linke tıkladığımızda herhangi bir mail adresine , mail göndermek için "a" etiketi kullanılır.
 a etiketinin href kısmına "mailto:" yazılır , ardından mail yazılır. Bu etiket şu şekilde
@@ -555,28 +748,80 @@ Bu etiket şu şekilde olur , <a href="tel:05456456450"> telefon et </a>
 
 
 
+
 Bulunduğu yerin tamamını kaplayan elementlere " blok element " denir.
 
 Bulunduğu yerin tamamını kaplamayan elementlere " inline element " denir."
 
 
+i etiketi , bir metin parçasının italik olarak gösterilmesini sağlar. Bu etiket , gösterilecek metnin önüne ve sonuna yerleştirilir ve <i> ve </i> şeklinde kullanılır. i etiketi , em etiketinin bir alternatifi olarak kullanılabilir. em etiketi de metin parçasının italik olarak gösterilmesini sağlar , ancak aynı zamanda metnin anlamının önemli olduğunu da belirtir.
 
-"em" veya "i" etiketi içerisine yazılan yazıya italik özelliği kazandırır. <em>  </em> , <i> </i>
 
-"strong" veya "b" etiketi içerisine yazılan yazıyı kalın bir şekilde gösterir. <strong> </strong> , <b> </b>
+em etiketi , bir metin parçasının italik olarak gösterilmesini ve aynı zamanda metnin anlamının önemli olduğunu belirtmeyi sağlar. Bu etiket , gösterilecek metnin önüne ve sonuna yerleştirilir ve <em> ve </em> şeklinde kullanılır. em etiketi , i etiketinin bir alternatifidir. i etiketi de italik olarak gösterilmesini sağlar, ancak aynı zamanda metnin anlamının önemli olduğunu belirtmez.
 
-div etiketi  ... yazılacak.
 
-span etiketi ... yazılacak.
+b etiketi , bir metin parçasının kalın olarak gösterilmesini sağlar. Bu etiket , gösterilecek metnin önüne ve sonuna yerleştirilir ve <b> ve </b> şeklinde kullanılır. b etiketi , strong etiketinin bir alternatifi olarak kullanılabilir. strong etiketi de metin parçasının kalın olarak gösterilmesini sağlar , ancak aynı zamanda metnin anlamının önemli olduğunu da belirtir.
+
+
+strong etiketi , bir metin parçasının kalın olarak gösterilmesini ve aynı zamanda metnin anlamının önemli olduğunu belirtmeyi sağlar. Bu etiket , gösterilecek metnin önüne ve sonuna yerleştirilir ve <strong> ve </strong> şeklinde kullanılır. strong etiketi , b etiketinin bir alternatifidir. b etiketi de metin parçasının kalın olarak gösterilmesini sağlar , ancak aynı zamanda metnin anlamının önemli olduğunu belirtmez. 
+
+
+
+div etiketi , bir HTML bloğu oluşturmak için kullanılan bir etikettir. div etiketi , genellikle bir araya getirilmiş birkaç HTML elementini bir bütün olarak gruplamak için kullanılır. div etiketi , içinde herhangi bir özel anlamı olmayan bir yapılandırma bloğu oluşturur. Örneğin , bir sayfanın bir kısmını stil vermek için bir div etiketi kullanabilirsiniz. div etiketinin kullanımı şu şekildedir : <div>  Buraya html elementleri gelecek </div>
+div etiketinin içinde , birkaç HTML elementi gösterilebilir. Örneğin , bir paragraf ve bir bağlantı içeren bir div etiketi aşağıdaki gibi olabilir : 
+<div>
+  <p>This is a paragraph inside a div element.</p>
+  <a href="#">This is a link inside a div element.</a>
+</div>
+
+div etiketinin yanı sıra , HTML'de birçok yapılandırma etiketi vardır , ancak div etiketi en sık kullanılanıdır ve genellikle diğer etiketlerle birlikte kullanılır.
+
+
+
+span etiketi , bir HTML bloğu oluşturmak için kullanılan bir etikettir. span etiketi , genellikle bir HTML elementin içinde birkaç kelime veya karakteri bir bütün olarak gruplamak için kullanılır. span etiketi , içinde herhangi bir özel anlamı olmayan bir yapılandırma bloğu oluşturur. Örneğin , bir paragraf içinde bir kelimeyi vurgulamak için bir span etiketi kullanabilirsiniz. 
+
+<p>Bu bir <span style="color:red">vurgulanmış</span> paragraftır.</p>
+
+Bu örnekte , p etiketi içinde bir paragraf oluşturulmuştur. Bu paragraf içinde , span etiketi kullanılarak "vurgulanmış" kelimesi oluşturulmuştur. Bu span etiketi içinde , kelimenin renkleri değiştirilmiştir. 
+Bu şekilde , paragraf içinde bir kelimeyi vurgulamak için span etiketi kullanılmıştır.
+
+
+span etiketinin içinde , birkaç HTML elementi gösterilebilir. Örneğin , bir span etiketi içinde bir bağlantı ve bir paragraf olabilir :
+
+<span>
+  <a href="#">This is a link inside a span element.</a>
+  <p>This is a paragraph inside a span element.</p>
+</span>
+
+
+span etiketi ayrıca , paragraf içinde kelimelere veya karakterlere ayrıca stil vermek için de kullanılabilir. Örneğin , aşağıdaki örnekte paragraf içinde bir kelimeyi kalın yapmak için span etiketi kullanılmıştır:
+
+<p> Bu bir <span style="font-weight:bold"> kalın </span> paragraftır. </p>
+
+Bu şekilde , span etiketi paragraf içinde bir kelimeyi vurgulamak için kullanılmıştır.
+
+
+span etiketi , genellikle div etiketine benzer şekilde kullanılır , ancak div etiketi daha geniş bir bloğu oluştururken , span etiketi daha küçük bir bloğu oluşturur. span etiketi ayrıca , div etiketi gibi stil vermek için de kullanılabilir.
+
 
 "br" etiketi bir sonraki etiketin içeriğinin bir alt satırdan başlamasını sağlar. <br> 
 
-"hr" etiketinden sonra düz bir cizgi çizilir. <hr>
+
+hr etiketi , html dosyasında bir yatay çizgi oluşturmak için kullanılır. Bu etiket genellikle bir paragraf veya başka bir içerik bölümünün sonunda kullanılır ve bu bölümler arasında bir ayrım oluşturur. Örneğin , aşağıdaki HTML kodu bir paragraf ve onun altında bir yatay çizgi oluşturacaktır :
+
+<p>Bu bir paragraftır.</p>
+<hr>
+
+hr etiketi , standart HTML olarak kullanılır ve genellikle biraz biçimlendirme için kullanılır. 
+Örneğin , hr etiketini bir renk ve genişlik belirterek kullanarak , yatay çizgi özelleştirilebilir. Ayrıca , hr etiketinin bir alt etiketi olmadığını unutmayın , bu nedenle bu etiket açıldıktan sonra kapatılmaz.
+
+<hr style="color:red; width:50%">
+
+Bu kod , kırmızı renkte ve dosya genişliğinin yarısı kadar geniş olan bir yatay çizgi oluşturacaktır.
 
 
-"blockquote" etiketi html sayfasında başka bir kaynaktan alıntılanan bir içeriği işaretlemek için kullanılır. Kaynağın yolunu belirtmek içinse 
 
-cite niteliği kullanılır. 
+"blockquote" etiketi html sayfasında başka bir kaynaktan alıntılanan bir içeriği işaretlemek için kullanılır. Kaynağın yolunu belirtmek içinse cite niteliği kullanılır. 
 
 <blockquote cite="https://tr.wikipedia.org/wiki/World_Wide_Web_Consortium">
 
@@ -588,7 +833,7 @@ cite niteliği kullanılır.
 
 h , p , ul , blockquote , div elementi block elementtir. 
 
-strong , a , b , img , inline elementtir.
+strong , a , b , img , i , em , li , span  inline elementtir.
 
 
 
@@ -646,12 +891,6 @@ Bunu belirtmemizin sebebi arama motorlarında bize bu sayfayı tarayıcımızın
 
 
 <body> Etiketi : HTML sayfanızın içeriği <body> etiketi içinde bulunur . Bu, tüm metni ve diğer içeriği (bağlantılar, resimler vb.) içerir.
-
-
-
-
-
-
 
 
 Etiketlerin içerisine biz de özellik oluşturabiliriz. Özelliğin ismi yazılır , sonrasında "=" sembolü yazılır,
