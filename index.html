@@ -1,4 +1,5 @@
 <!--   
+  
 
 HTML Nedir?
 
@@ -837,64 +838,271 @@ strong , a , b , img , i , em , li , span  inline elementtir.
 
 
 
-id etiketi , "id" kullanılan etiketin kimliğini belirtir. Biriciktir *(unique)* yani dökümanın içindeki bir 
-etikete yalnızca bir kez o id ismi verilebilir.
+Html etiketlerine ekstra özellikler eklemek
+
+Bu ek özellikler Türkçe kaynaklarda HTML etiketlerinin nitelikleri , özellikleri veya öznitelikleri diye geçmektedir. 
+
+
+Html elementlerinin özellikleri 
+
+Tüm HTML elementleri nitelik alabilirler. Her zaman başlangıç elemanının içine yazılır.
+Bu nitelikler , etiketler konusunda ekstra özellik bilgisi sağlar.
+
+Html etiketlerinin özelliklerine değer verilirken , değer iki kelimeden oluşacaksa genellikle iki kelime arasına '-' sembolü koyulur. 
+Örneğin class özelliğine birincisinif-ikincisinif diye değer verirken kelimelerin arasına 
+'-' sembolü koyulur.
+
+class veya id gibi özelliklerin değeri belirlerken Türkçe karakter tercih edilmemelidir.(ş ç , ö , ü , ğ , büyük İ ve küçük ı )
+
+Html de özelliği kullanabilmek için özniteliği yazdıktan sonra ="" kullanılıp özelliğe vereceğimiz değer tırnakların içine yazılmalıdır.
+
+Html de etiketlerin özelliklerinden başka kendimiz de özellik oluşturabiliriz.Oluşturduğumuz özelliğede  = "" diyerek değer veririz. Örneğin varış adında özellik oluşturup = "araba" varış özelliğine araba değerini verdik.
+
+
+id (identity = kimlik) özelliği 
+
+"id" kullanılan etiketin kimliğini belirtir. Biriciktir 'unique' yani dökümanın içindeki bir etikete yalnızca bir kez o id ismi verilebilir.
+
 <a href ="https://www.facebook.com/" id ="facebook-URL" ><a> Buradaki id yi kullanarak 
 direkt olarak bu HTML etiketine ulaşabiliriz.
 id biricik olduğu için istisna olarak id = facebook-URL şeklinde yazarak tırnak işareti kullanmayabiliriz.
 
 
+class (sınıf) özelliği 
 
-class etiketi , class, HTML etiketinin hangi sınıfta olduğunu belirmemizi sağlar. 
+class , HTML etiketinin hangi sınıfta olduğunu belirlememizi sağlar. 
+
 Aynı sınıf adını birden fazla HTML etiketine verebiliriz.
+
 <img src ="" class ="documents">
 <a href ="" class ="documents" ></a>
-Burada görüldüğü gibi iki HTML etiketi de(img ve a) documents sınıfında bulunmaktadır. Daha sonrasında 
-aynı sınıfta bulunan bu iki etikete CSS ile aynı anda değişiklik yapılabilir.
+
+Burada görüldüğü gibi iki HTML etiketi de(img ve a) documents sınıfında bulunmaktadır. Daha sonrasında aynı sınıfta bulunan bu iki etikete CSS ile aynı anda değişiklik yapılabilir.
 
 
 
-
-Bir html sayfası oluşturmadan önce mutlaka HTML 5 standartlarına uygun bir html iskeleti oluşturmalıyız. 
-Web sayfalarımızı HTML 5 standardına uygun hazırlamamız büyük önem taşımaktadır ,
-çünkü arama motorları tarafından önemsenmektedir. 
-
-HTML yapısında sayfanın genel yapısını tanımlamak ve bazı basit başlık bilgilerini sağlamak için 3 farklı etiket bulunur. 
-Bu üç etiket <html> , <head> ve <body> her web sayfasının temel iskeletini oluşturur.
-
-Ayrıca, her şeyi yüklemeden önce sayfa hakkında basit bilgiler (başlığı veya yazarı gibi) sağlarlar. Sayfa yapısı etiketleri, sayfanın görüntülendiğinde nasıl görüneceğini etkilemez; sadece tarayıcılara yardımcı olmak için bulunurlar.
-
-DOCTYPE Tanıtıcı : Bir sayfa yapısı etiketi olmasa da, XHTML 1.0 ve HTML 5 standartları web sayfalarınıza ek bir gereklilik getirir.
-Her sayfanın ilk satırı, sayfanızın uygun olduğu HTML sürümünü tanımlayan bir DOCTYPE tanımlayıcısı ve bazı durumlarda, spesifikasyonu tanımlayan Belge Türü Tanımını (DTD) içermelidir .
-Bunu <html> , <head> ve <body> etiketleri takip eder. HTML 5 belge türü, sayfa yapısı etiketlerinden önce görünür.
-
-<html> Etiketi : Her HTML sayfasındaki ilk sayfa yapısı etiketi <html> etiketidir. 
-Bu dosyanın içeriğinin HTML dilinde olduğunu gösterir. <html> etiketi DOCTYPE tanımlamasından hemen sonra kullanılmalıdır.
-Web sayfanızdaki tüm metin ve HTML öğeleri HTML etiketlerinin başlangıcına ve bitişine yerleştirilmelidir.     
-
-<html> etiketi sayfasını oluşturan etiketlerin tümünün bir kabı olarak hizmet vermektedir. Bunu dışarıda bırakırsanız, ki bunu yapmamalısınız çünkü bu, sayfanızı geçersiz kılar, tarayıcı sizin için bir <html> etiketi oluşturur, böylece sayfa HTML işlemcisi için anlamlı olur.
-
-<head> Etiketi : <head> etiketi sayfayla ilgili bilgiler içeren etiketler için bir kapsayıcıdır. 
-Genellikle sayfanın <head> bölümünde yalnızca birkaç etiket kullanılır. 
-Sayfanızın hiçbir metnini başlığa ( <head> etiketleri arasına ) koymamalısınız. 
-Yine <head> etiketinin arasında bulunan lang anahtar kelimesinin amacı sayfa içeriğinin hangi dilde oluştuğudur. 
-Bunu belirtmemizin sebebi arama motorlarında bize bu sayfayı tarayıcımızın diliyle zıt düştüğü durumda çevirme tavsiyesi verip vermemesini sağlamaktır.
+Html iskeletinin genel yapısını anlamak
 
 
-<head> Etiketi Arasında Bulunan Diğer Anahtar Kelimelerin Görevleri : 
+HTML sayfalarının en temel bileşenleri nelerdir , bir html iskeleti nasıl oluşturulur.
 
-<meta> : Sayfamızı tanımlayan açıklamaların bulunduğu kısımdır. Sayfa açıklaması, sayfa başlığı, kullanılan karakter seti tanımlaması gibi işlemler burada tanımlanıyor.
+Web tasarım konusunda araştırma yapan hemen herkesin karşına çıkan temel kavram HTML'dir. Web sayfalarını oluşturma aşamasında kullanılan standart bir metin işaret dili olan HTML açılımı “Hyper Text Markup Language” olarak bilinir. Genel bilinen yanlış kanının aksine HTML bir programlama dili değildir. Daha açık anlatmak gerekirse , Chrome , Firefox , Yandex gibi tarayıcıların okuyup anlamlandırdığı dil HTML dilidir.
+
+
+Bir html sayfası oluşturmadan önce mutlaka HTML 5 standartlarına uygun bir html iskeleti oluşturmalıyız. Web sayfalarımızı HTML 5 standardına uygun hazırlamamız büyük önem taşımaktadır. Çünkü arama motorları tarafından önemsenmektedir.
+
+
+HTML yapısında sayfanın genel yapısını tanımlamak ve bazı basit başlık bilgilerini sağlamak için 3 farklı etiket bulunur. Bu üç etiket <html> , <head> ve <body> her web sayfasının temel iskeletini oluşturur. 
+
+Ayrıca , her şeyi yüklemeden önce sayfa hakkında basit bilgiler ( başlığı veya yazarı gibi ) sağlarlar. Sayfa yapısı etiketleri , sayfanın görüntülendiğinde nasıl görüneceğini etkilemez. sadece tarayıcılara yardımcı olmak için bulunurlar.
+
+
+DOCTYPE Tanıtıcı 
+
+Bir sayfa yapısı etiketi olmasa da , XHTML 1.0 ve HTML 5 standartları web sayfalarınıza ek bir gereklilik getirir. Her web sayfanın ilk satırı , sayfanızın uygun olduğu HTML sürümünü tanımlayan bir DOCTYPE tanımlayıcısı  ( yani html sayfanızda hangi html sürümününün kullanılmasını istiyorsanız DOCTYPE ile o html sürümünü yazıcağız. ) ve bazı durumlarda , spesifikasyonu tanımlayan Belge Türü Tanımını (DTD) içermelidir . Bunu <html> , <head> ve <body> etiketleri takip eder. HTML 5 belge türü , sayfa yapısı etiketlerinden önce görünür.
+
+
+<html> etiketi
+
+Her HTML sayfasındaki ilk sayfa yapısı etiketi <html> etiketidir. Bu dosyanın içeriğinin HTML dilinde olduğunu gösterir. <html> etiketi DOCTYPE tanımlamasından hemen sonra kullanılmalıdır. Web sayfanızdaki tüm metin ve HTML öğeleri HTML etiketlerinin başlangıcına ve bitişine yerleştirilmelidir. 
+
+<html> etiketi , html sayfasını oluşturan etiketlerin tümünün bir kabı olarak hizmet vermektedir. Bunu dışarıda bırakırsanız ki , bunu yapmamalısınız , çünkü bu sayfanızı geçersiz kılar , tarayıcı sizin için bir <html> etiketi oluşturur , böylece sayfa html işlemcisi için anlamlı olur.
+
+
+<head> etiketi
+
+HTML head etiketi , bir HTML belgesinin başında bulunan ve belgenin özelliklerini ve meta bilgilerini tanımlayan bir bölümdür. head etiketi , bir HTML belgesinin body bölümünden önce gelerek , belge içeriğinin görüntülenmesine öncelik verir. head etiketi içinde , bir belge için gerekli olabilecek birçok farklı öğe bulunabilir , ancak en yaygın olarak kullanılanlar şunlardır :
+
+title etiketi: Bu etiket , bir belgenin başlığını tanımlar ve tarayıcılar tarafından gösterilen sekmede görüntülenir.
+
+style etiketi: Bu etiket , bir belgede kullanılacak olan CSS (Cascading Style Sheets - Stil Şablonları) kodlarını içerir. CSS , bir belgedeki elemanların görünümünü tanımlayan bir dil olup , bir belgede kullanılacak olan tüm stil bilgileri head etiketi içinde yer alır.
+
+script etiketi: Bu etiket , bir belgede kullanılacak olan JavaScript kodlarını içerir. JavaScript , bir belgede dinamik olarak değişen içerikleri yöneten bir dil olup , bir belgede kullanılacak olan tüm JavaScript kodları head etiketi içinde yer alır.
+
+meta etiketi: Bu etiket , bir belgenin meta bilgilerini tanımlar. Meta bilgileri , bir belge hakkında daha fazla bilgi içeren özel etiketlerdir ve tarayıcılar ve arama motorları tarafından kullanılır. Örneğin , bir belge için anahtar kelimeler ve açıklama etiketleri meta bilgileridir.
+
+
+HTML meta etiketi , bir HTML belgesinin head bölümünde yer alan ve belge hakkında daha fazla bilgi içeren özel etiketlerdir. Meta bilgileri , tarayıcılar ve arama motorları tarafından kullanılır ve belgenin görünümünü etkilemezler.
+
+Meta etiketleri , name ve content öznitelikleri ile tanımlanır. name öznitelik , meta bilgisi için kullanılacak olan anahtar kelimeyi tanımlar. content öznitelik ise , meta bilgisi için kullanılacak olan değeri tanımlar.
+
+
+İşte bazı yaygın meta etiketleri:
+
+description: Bu etiket , bir belge hakkında kısa bir açıklama içerir ve arama motorları tarafından kullanılır. Örnek: <meta name="description" content="Bu bir örnek HTML belgesidir">
+
+keywords: Bu etiket , bir belge için anahtar kelimeler içerir ve arama motorları tarafından kullanılır. Örnek: <meta name="keywords" content="HTML, belge, örnek">
+
+author: Bu etiket , bir belgenin yazarını tanımlar. Örnek: <meta name="author" content="John Doe">
+
+viewport: Bu etiket, bir belgenin mobil cihazlar gibi dar ekranlarda nasıl görüntüleneceğini tanımlar. Örnek: <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<head> etiketi sayfayla ilgili bilgiler içeren etiketler için bir kapsayıcıdır. Genellikle sayfanın <head> bölümünde yalnızca birkaç etiket kullanılır. Sayfanızın hiçbir metnini başlığa ( <head> etiketleri arasına ) koymamalısınız. Yine <head> etiketinin arasında bulunan lang anahtar kelimesinin amacı sayfa içeriğinin hangi dilde oluştuğudur. Bunu belirtmemizin sebebi arama motorlarında bize bu sayfayı tarayıcımızın diliyle zıt düştüğü durumda çevirme tavsiyesi verip vermemesini sağlamaktır.
+
+
+<head> etiketi arasında bulunan diğer anahtar kelimelerin görevleri
+
+
+<meta> : Sayfamızı tanımlayan açıklamaların bulunduğu kısımdır. Sayfa açıklaması , sayfa başlığı , kullanılan karakter seti tanımlaması gibi işlemler burada tanımlanıyor.
 
 <title>: Tarayıcı penceresinin sekmesindeki başlığı buradan belirtiyoruz.
 
-<style>: Sayfada kullanılan stil işlemlerinin tanımlaması yapılır. Örneğin arka plan rengi yazı rengi ya da nesnelerin hizalanması gibi işlemler.
+<style>: Sayfada kullanılan stil işlemlerinin tanımlaması yapılır. Örneğin arka plan rengi  yazı rengi ya da nesnelerin hizalanması gibi işlemler.
 
 
-<body> Etiketi : HTML sayfanızın içeriği <body> etiketi içinde bulunur . Bu, tüm metni ve diğer içeriği (bağlantılar, resimler vb.) içerir.
+
+<body> Etiketi
+
+HTML sayfanızın içeriği <body> etiketi içinde bulunur . Bu , tüm metni ve diğer içeriği    ( bağlantılar , resimler vb. ) içerir.
+
+Aşağıdaki örnekte etiketlerin iç içe olduğunu göreceksiniz. Yani hem <body> ve </body> hem de <head> ve </head> etiketlerini <html> etiketlerinin kapsadığını göreceksiniz. Tüm HTML etiketleri bu şekilde çalışır ve metnin tek tek iç içe bölümlerini oluşturur.
+
+<! DOCTYPE html> 
+<html> 
+<head> 
+<title> Bu bir başlıktır.</title> 
+</head> 
+<body> 
+... sayfanız ... 
+</body> 
+</html>
 
 
-Etiketlerin içerisine biz de özellik oluşturabiliriz. Özelliğin ismi yazılır , sonrasında "=" sembolü yazılır,
-" " sembolünün arasına değeri gireriz. Örnek : <img data-mek="dada">
+
+Semantic(Anlamlandırılmış) HTML Etiketleri Kullanımı
+
+
+Semantik , anlam veya anlamlandırma anlamı ifadesi taşımaktadır. O halde semantik elementler herhangi bir anlamı olan etiketler ifadesi taşımaktadır. Semantik olarak anlamlandırılmış bir element hem tarayıcıya hem geliştiriciye ne anlama geldiğini açık bir şekilde belirtir. <div> ve <span> gibi elementler semantik olmayan elementlerdir ve mevcut içeriğin hakkında bilgi vermezler. <form> , <table> ve <img> gibi elementler semantik elementlerdir ve içeriği açıkça belirtirler.
+
+
+Nav etiketi 
+
+<nav> etiketi , bir sayfadaki navigasyon bölümünü belirtmek için kullanılır. Navigasyon bölümü , bir web sitesinde gezinmek için kullanılan bağlantıları içerir. Örneğin , bir web sitesinin ana sayfasına , hakkımızda sayfasına ve iletişim sayfasına giden bağlantılar navigasyon bölümünde olabilir.
+
+
+Header etiketi
+
+HTML <header> etiketi , bir web sayfasının başlığını veya en üst kısmını tanımlayan bir bölümdür. Bu bölüm , genellikle sayfanın üstünde yer alır ve sayfanın başlığını , arama formunu , logo gibi öğeleri ve navigasyon menüsü gibi öğeleri içerebilir.
+
+Bir HTML belgesinde birden fazla <header> elementi olabilir. Ancak , <header> elementi bir <footer> , <address> veya başka bir <header> elementi içinde yer alamaz.
+
+header etiketi , bir sayfanın birçok farklı bölümünde de kullanılabilir. Örneğin , bir makalede her bölümün başlığını içeren bir <header> etiketi oluşturabilirsiniz.
+
+<article>
+  <header>
+    <h2>Bölüm 1: Giriş</h2>
+  </header>
+  <p>Bu bölümde makalenin amacı hakkında bilgi verilecektir.</p>
+  <header>
+    <h2>Bölüm 2: Geliştirme</h2>
+  </header>
+  <p>Bu bölümde makalenin konusu hakkında ayrıntılı bilgi verilecektir.</p>
+</article>
+
+Böylece , her bölümün başlığı <header> etiketi içinde görüntülenmiş olur ve diğer içeriklerden ayrılmış olur.
+
+
+
+Footer etiketi
+
+Footer etiketi , bir web sayfasının en altında bulunan bölümdür. Genellikle bu bölümde, sayfanın sahibi, yayıncısı ve lisans bilgileri gibi bilgiler yer alır. Ayrıca, bir web sayfasının diğer sayfalarına linkler ve çeşitli iletişim bilgileri de bulunabilir. Footer etiketi HTML dilinde <footer> olarak kullanılır.
+
+
+Article etiketi
+
+Bir web sayfasında yazılı içeriği temsil eder. Article etiketi , bir makale , haber , blog girdisi gibi yazılı içeriği temsil eder. Article etiketi , bir yazının veya makalenin başlangıcını ve bitişini belirtir ve içeriği tarafından çevreleyen diğer etiketlerle birlikte kullanılır. Örneğin , bir article etiketi içinde , bir heading etiketi kullanılarak başlık belirtilebilir ve bir paragraph etiketi kullanılarak paragraflar oluşturulabilir.
+
+Article etiketi ayrıca bir web sayfasında birden fazla makale veya yazı olması durumunda , bu etiketler kullanılarak her bir makale veya yazı ayrı ayrı tanımlanabilir. Bu sayede , web sayfasının içeriği arama motorları tarafından daha iyi anlaşılabilir ve daha etkin bir şekilde indekslenebilir.
+
+
+
+Section etiketi
+
+"section" etiketi bir web sayfasının içeriğini bölümlere ayırmak için kullanılır. Bu etiket , bir web sayfasının çeşitli bölümlerini belirtmek ve bu bölümler arasında bir bağlantı oluşturmak için kullanılır. Örneğin , bir web sayfasında bir haber sitesinin anasayfasında birkaç haberin yer aldığı bir bölüm ve bir de "Son Dakika" haberlerinin yer aldığı bir bölüm olabilir. Bu iki bölümü ayrıştırmak için "section" etiketi kullanılabilir.Böylece , web sayfasında haberler ve son dakika haberleri bölümleri olarak ayrıştırılmış olur.
+
+"section" etiketi, birçok farklı amaç için kullanılabilir ve web sayfasının içeriğini organize etmek için çok yararlıdır. Örneğin , bir e-ticaret sitesinde ürünlerin listelendiği bir bölüm , bir blog sitesinde yazıların yer aldığı bir bölüm gibi.
+
+
+
+section etiketi HTML'de bir bölümü temsil eder. Genellikle bir web sayfasının içeriğini daha düzenli ve anlaşılır hale getirmek için kullanılır. section etiketi , div etiketine benzer şekilde bir bloğu oluşturur ,  ancak section etiketi bir sayfanın içeriğini daha kapsamlı bir şekilde gruplandırmayı amaçlar. Örneğin , bir haber sitesinin ana sayfasında haberlerin yer aldığı bölümler section etiketi ile işaretlenebilir.
+
+section etiketi aşağıdaki özellikleri taşır:
+
+section etiketi, bir web sayfasının içeriğini düzenli bir şekilde gruplandırmak için kullanılır.
+
+section etiketi , div etiketine benzer şekilde bir bloğu oluşturur , ancak section etiketi bir sayfanın içeriğini daha kapsamlı bir şekilde gruplandırmayı amaçlar.
+
+section etiketi , bir sayfanın içeriğini daha anlaşılır hale getirmek için kullanılır.
+
+
+
+Aside etiketi
+
+aside etiketi , bir web sayfasındaki bir içeriğin yanı sıra olan bir bölümü tanımlar. Bu etiket genellikle bir sayfanın ana içeriğinden bağımsız olarak , yanında gösterilen bir bilgi veya içerik bloğunu tanımlar.
+Bağımsız" kelimesi , aside etiketiyle tanımlanan içerik bloğunun sayfanın ana içeriğinden ayrı bir bölüm olarak gösterildiğini belirtir.
+
+
+aside etiketi , article , section veya main etiketlerinin içinde kullanılabilir ve genellikle bir sayfanın sol veya sağ tarafında gösterilir. Örneğin , bir blog yazısının yanında , yazar hakkında bilgi veren bir kutu gösterilebilir veya bir haber makalesinin yanında , ilgili haberlerle ilgili bağlantılar veren bir menü gösterilebilir.
+
+
+Aşağıdaki örnekte , aside etiketi , bir blog yazısının yanında gösterilen bir yazar bilgi kutusunu tanımlar:
+
+
+<article>
+  <h1>Blog Yazısı Başlığı</h1>
+  <p>Blog yazısı içeriği...</p>
+  <aside>
+    <h2>Yazar Hakkında</h2>
+    <p>Yazar hakkında bilgi...</p>
+  </aside>
+</article>
+
+
+Gösterilen sayfada , yazar hakkında bilgi kutusu aside etiketinin içinde tanımlıdır ve sayfanın ana içeriğinden bağımsızdır.
+
+
+
+Figure etiketi
+
+figure etiketi , bir web sayfasında bir resim , bir video , bir grafik gibi bir medya öğesini içeren bir kapsayıcı olarak kullanılır. figure etiketi , genellikle bir metin bloğunun içinde kullanılır ve metnin akışını bozmaması için tasarlandı. Yani , figure etiketi içindeki medya öğesi metnin düzenine göre yerleştirilir ve metnin akışını etkilemez.
+
+figure etiketini kullanırken , içine bir figcaption etiketi de koyabilirsiniz. Bu etiket , figure içindeki medya öğesi hakkında kısa bir açıklama eklemek için kullanılır. Örneğin:
+
+<figure>
+  <img src="image.jpg" alt="A description of the image">
+  <figcaption>An image of a beautiful landscape</figcaption>
+</figure>
+
+Bu örnekte , figure etiketi içinde bir resim ve bir figcaption etiketi bulunur. figcaption etiketi , resmin açıklaması olarak "A beautiful landscape" yazısını içerir.
+
+
+<p>According to a recent study (Figure 1), the number of smartphone users is increasing rapidly.</p>
+
+<figure id="figure1">
+  <img src="study.jpg" alt="A graph showing the increase in smartphone users">
+  <figcaption>Figure 1: Increase in smartphone users</figcaption>
+</figure>
+
+Bu örnekte , figure etiketi içinde bir resim ve bir figcaption etiketi bulunur. Ayrıca , figure etiketi bir id özniteliği ile etiketlenmiştir ve bu id "figure1" olarak ayarlanmıştır. Bu id , metin içinde referans gösterimi için kullanılır. Örneğin , metin içinde "Figure 1" yazılırsa , okuyucuya bu referans numarası ile etiketlenmiş figure etiketinin içinde ne olduğu hakkında bilgi verilmiş olur. 
+
+
+
+Main etiketi
+
+<main> etiketi , bir belgenin ana içeriğini belirtir.
+
+<main> öğesinin içindeki içerik , belgeye özgü olmalıdır. kenar linkleri , navigasyon linkleri , telif hakkı bilgileri, site logoları ve arama formları gibi belgeler arasında tekrarlanan içerikleri içermemelidir.
+
+Bir belgede birden fazla <main> elementi olmamalıdır. <main> öğesi , <article> , <aside> , <footer> , <header> veya <nav> tagları içerisinde olmamalıdır.
+
+
+
+
+
+
+
 
 
 
