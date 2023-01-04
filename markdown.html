@@ -1,0 +1,123 @@
+<!-- 
+
+
+Markdown , John Gruber ve Aaron Swartz tarafından geliştirilen ve 2004 yılından bu yana kullanılan metinden HTML'e (text-to-HTML) dönüşüm için kullanılan hafif bir işaretleme dilidir.
+
+GitHub gibi platformları kullananların aşina olduğu Markdown formatı , yaygın kanının aksine sadece README dosyaları oluşturmak kullanılmaz. Temel amaç okunabilirliği ve kullanılabilirliği arttırmaktır. Basitliği ve sadeliği sayesinde forumlarda ileti yazmaktan , kitap yazmaya kadar pek çok yerde kullanılabilir. Asıl güçlü olduğu kısım klavyeden elinizi kaldırmadan tablolardan , matematiksel ifadelere kadar ihtiyaç duyduğunuz her şeyi oluşturabilmeniz ve sonrasında biçimlendirebilmenizdir.
+
+
+Başlıklar
+HTML'de <h1> , <h2> , <h3> etiketleri ile aç-kapat yaparak oluşturduğumuz başlıkları , Markdown ile sadece # karakteri kullanarak oluşturabiliyoruz. Burada önemli olan nokta # karakterinden sonra boşluk bırakmaktır.
+
+h1 ve h2 başlıklar yazarken alternatif olarak bir yöntem daha mevcut. h1 için =  ve  h2 için - kullanabilirsiniz.
+
+Not: h1 ve h2 başlıklarda GitHub'ın yaptığı özelleştirme sebebiyle otomatik olarak gri bir çizgi geliyor.
+
+
+Paragraf
+Paragraf oluşturmak için haricen bir işlem yapmak gerekmiyor. Markdown formatında yazıyorsanız yeni bir satır oluşturmak paragraf için yeterli. Bir paragraf tek satırdan oluşabileceği gibi , arada boşluk bırakmadan alt satırdan devam etmek de mümkün.
+
+
+Kalın , Eğik ve Üstü Çizili İfadeler
+Yaygın kullanımda kalın yazmak için ** , eğik yazmak için * , hem kalın hem eğik yazmak için *** kullanılmaktadır.
+Ancak metin içeriği bu 3 sembolün arasında hiç boşluk olamayacak biçimde olmalıdır.( **bold** ,  *italic* ,
+***bolditalic*** )
+
+
+
+
+Tek ve Çok Satırlı Kod Blokları
+Tek satır kod bloğu için kodun başına ve sonuna ` (backtick) karakteri eklenir.
+`console.log("Hello, World!");`
+
+
+Çok satır kod bloğu için kodun başına ve sonuna 3 adet ``` ( backtick ) karakteri eklenir.
+
+```
+console.log("hello world");
+function (){
+console.log("Hello, World!);
+}
+```
+
+Yazılım diline göre kod bloğundaki ifadelerin stillendirilmesini isterseniz , kod bloğunun başındaki 3 adet backtick ifadesinden sonra javascript , python , css gibi etiket ekleyebilirsiniz.
+
+```javascript
+console.log("hello world");
+function (){
+console.log("Hello, World!);
+}
+```
+
+
+Yatay Çizgi
+İçerikte bölümleme yapmak için --- kullanabilirsiniz. HTML'deki karşılığı <hr> olan bu ifade ekran boyunca düz  çizgi üretir.
+
+
+Listeler
+HTML'de <ul> </ul> , <ol> </ol> ve <li> </li> etiketleri ile oluşturulan listeler Markdown formatında - ve * ile oluşturulur.
+
+Sırasız liste elde etmek için - karakterinden sonra 1 tane boşluk bırakılır sonrasında liste elemanı yazılır.
+
+- Liste Elemanı 1    
+- Liste Elemanı 2
+- Liste Elemanı 3
+
+
+Sıralı liste elde etmek için tek yapmanız gereken liste elemanlarının başına sıra numarası ve . nokta eklemek ve 
+sonrasında bir boşluk bırakıp liste elemanını yazmaktır.
+
+Buradaki önemli nokta şu: Siz farklı sıra numaraları vermek isteseniz de Markdown sıra numaralarını otomatik olarak biçimlendirmektedir.
+
+1. Liste Elemanı
+4. Liste Elemanı
+3. Liste Elemanı
+
+
+Markdown ile iç içe listeler yapmak için , alt listelere tab ile girinti verdiğimizde otomatik olarak nested list yapısına dönüşmekte.
+
+1. Liste Elemanı
+    1. Alt Liste Elemanı
+    2. Alt Liste Elemanı
+2. Liste Elemanı
+3. Liste Elemanı
+
+
+
+Tablo oluşturmak için aşağıdaki yapı kullanılır. Satır çizgisi için kullanılan - karaterine : işareti eklenerek tabloda sola , sağa veya ortaya hizalama yapılabilir. Tabloda sütunları oluşturmak için |  | karakteri kullanılır ve bu satırları oluşturmak için de bu iki karakterin içerisine kelimeler yazılır. 
+
+1.sütundaki kelimeleri sola hizalamak için |  | karakterinin içine 3 çizgi koyulur ve çizgilerin başına bir nokta konur. 
+
+2.sütundaki kelimeleri ortaya hizalamak için |  | karakterinin içine 3 çizgi koyulur ve çizgilerin başına ve sonuna  bir nokta konur.
+
+3.sütundaki kelimeleri sağa hizalamak için |  | karakterinin içine 3 çizgi koyulur ve çizgilerin başına bir nokta konur.
+
+
+| Ürünlerin Numaraları| Ürün Açıklaması| Ürünlerin Fiyatı|
+| :--- | :---: | ---: |
+| 1 | Açıklama | Fiyatı |
+
+
+
+Bağlantı ve Resim Eklemek
+HTML'den aşina olduğumuz <a> etiketi yerine Markdown'da []() karakterleri kullanılır. Köşeli parantez bağlantı açıklamasını , küme parantezi ise linki barındırır.
+
+[youtube](https://www.youtube.com/)
+
+
+Bağlantı resimleri de aynı şekilde eklenir. Sadece köşeli parantezden önce bir tane ! ünlem işareti eklenmelidir.
+Köşeli parantez html de alt özelliğini temsil eder yani oraya resmin açıklaması yazılır. Köşeli parantezin içini doldurmak zorunlu değildir , boş da kalabilir.                        
+
+( ) bu iki parantezin arasına resmin adresi( resmin nerede ollduğu ) yazılır. 
+![lorempicsum](https://picsum.photos/536/354)
+
+
+Alıntı
+Yazınız içinde alıntı kullanmak isterseniz yapmanız gereken , metinin başına > karakteri koymaktır.
+
+> Alıntı yapılan metin.
+
+
+
+
+-->
